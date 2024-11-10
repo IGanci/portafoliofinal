@@ -1,0 +1,224 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --background-color-light: #f0f0f0;
+    --background-color-dark: #121212;
+    --content-bg-light: #fff;
+    --content-bg-dark: #2c2c2c;
+    --text-color-light: #333;
+    --text-color-dark: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+header {
+    background-color: var(--primary-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+header.dark-mode {
+    background-color: var(--primary-color);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.logo img {
+    max-height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links span a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links span a:hover {
+    color: #ccc;
+}
+
+main {
+    padding-top: 80px;
+    min-height: calc(100vh - 160px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color-light);
+    transition: color 0.3s;
+}
+
+body.dark-mode h1 {
+    color: var(--text-color-dark);
+}
+
+.experience-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--content-bg-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card.dark-mode {
+    background-color: var(--content-bg-dark);
+}
+
+.card h2 {
+    color: var(--text-color-light);
+    margin-top: 0;
+    transition: color 0.3s;
+}
+
+body.dark-mode .card h2 {
+    color: var(--text-color-dark);
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+    transition: color 0.3s;
+}
+
+body.dark-mode .card p {
+    color: var(--text-color-dark);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer.dark-mode {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-content .nav-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content .nav-links a:hover {
+    color: #ccc;
+}
+
+.footer-content .copyright {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    header {
+        position: static;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    main {
+        padding-top: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-content .nav-links {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 10px;
+    }
+}
+
+/* Botón de modo oscuro */
+#dark-mode-toggle {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #f1f1f1;
+}

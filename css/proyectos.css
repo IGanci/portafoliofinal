@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f5f7;
+    color: #fff;
+}
+
+header {
+    background-color: hsl(0, 0%, 20%);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links span a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links span a:hover {
+    color: #ccc;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 100px auto 100px; /* Adjusted top margin to account for fixed header */
+    padding: 20px;
+    background-color: #9e9ea1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tarjeta {
+    margin: 20px;
+    width: calc(33.33% - 40px);
+    background-color: #555;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.tarjeta h2 {
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tarjeta p {
+    margin: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 27px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 10 auto;
+    padding: 0 20px;
+}
+
+.footer-content .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-content .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content .nav-links a:hover {
+    color: #ccc;
+}
+
+.footer-content .copyright {
+    font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+    .tarjeta {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo {
+        margin-bottom: 10px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .container {
+        margin-top: 120px; /* Adjusted for multi-line navbar */
+    }
+
+    .tarjeta {
+        width: calc(100% - 40px);
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-content .nav-links {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        max-width: 80px;
+    }
+}

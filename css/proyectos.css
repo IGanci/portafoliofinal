@@ -1,3 +1,13 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --background-color-light: #f0f0f0;
+    --background-color-dark: #121212;
+    --content-bg-light: #fff;
+    --content-bg-dark: #2c2c2c;
+    --text-color-light: #333;
+    --text-color-dark: #fff;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -50,6 +60,27 @@ nav {
     color: #ccc;
 }
 
+/* Estilos actualizados del menú hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.hamburger span {
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
 .container {
     max-width: 1200px;
     margin: 100px auto 100px; /* Adjusted top margin to account for fixed header */

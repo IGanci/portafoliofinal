@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="css/darkMode.css">
     <title>Portfolio</title>
 </head>
-<body>
+<body data-modo="claro">
     <header>
         <div class="nav-container">
             <nav>
@@ -25,7 +26,7 @@
                     <span><a href="pag/formulario.html">Contacto</a></span>
                     <span><a href="https://github.com/IGanci" target="_blank">GitHub</a></span>
                 </div>
-                <button id="dark-mode-toggle">Modo Oscuro</button>
+                <button class="boton-modo-oscuro" onclick="cambiarModo()">Modo Oscuro</button>
             </nav>
         </div>
     </header>
@@ -64,5 +65,6 @@
     </footer>
 
     <script src="script/index.js"></script>
+    <script src="script/darkMode.js"></script>
 </body>
 </html>
